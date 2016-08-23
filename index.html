@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Photos galery</title>
+        <title>Photos gallery</title>
         <link rel="stylesheet" href="main.css" media="screen" charset="utf-8">
     </head>
     <body>
@@ -11,7 +11,7 @@
         <div class="container photos" id="photos-viewer"></div>
     </div>
 
-    <script type="text/javascript" src="photos-galery.js"></script>
+    <script type="text/javascript" src="photos-gallery.js"></script>
     <script type="text/javascript" src="loaders/flickr-loader.js"></script>
     <script type="text/javascript" src="templaters/templater.js"></script>
     <script type="text/javascript" src="templaters/flickr-templater.js"></script>
@@ -21,25 +21,25 @@
 
             var container = document.getElementById('photos-viewer');
 
-            var photosGalery = new PhotosGalery();
+            var photosGallery = new PhotosGallery();
 
             var loader = new FlickrLoader('6334848e9069620388991202c6da7411','ocean')
-            photosGalery.setLoader(loader);
+            photosGallery.setLoader(loader);
 
             var templater = new FlickrTemplater(container);
-            photosGalery.setTemplater(templater);
+            photosGallery.setTemplater(templater);
 
-            var keyUpControl = new KeyUpControl(photosGalery);
-            var wheelControl = new WheelControl(photosGalery);
+            var keyUpControl = new KeyUpControl(photosGallery);
+            var wheelControl = new WheelControl(photosGallery);
 
             // var loader = new MockLoader()
-            // photosGalery.setLoader(loader);
+            // photosGallery.setLoader(loader);
             //
             // var templater = new MockTemplater(container);
-            // photosGalery.setTemplater(templater);
+            // photosGallery.setTemplater(templater);
 
 
-            photosGalery.run();
+            photosGallery.run();
 
     </script>
     </body>

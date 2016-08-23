@@ -1,26 +1,26 @@
 var KeyUpControl = (function() {
 
-    function KeyUpControl(galery) {
+    function KeyUpControl(gallery) {
         window.addEventListener('keyup', function(e) {
             var keyCodes = {
                 code37: function() {
-                    galery.moveLeft();
+                    gallery.moveLeft();
                 },
                 code38: function() {
-                    galery.moveUp();
+                    gallery.moveUp();
                 },
                 code39: function() {
-                    galery.moveRigth();
+                    gallery.moveRigth();
                 },
                 code40: function() {
-                    galery.moveDown();
+                    gallery.moveDown();
                 }
             };
 
             var code = 'code' + e.keyCode;
             if(keyCodes[code]) {
                 e.preventDefault();
-                if(!galery.templater.isScrolling) {
+                if(!gallery.templater.isScrolling) {
                     keyCodes[code]();
                 }
             }

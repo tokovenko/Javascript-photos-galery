@@ -1,6 +1,6 @@
-var PhotosGalery = (function() {
+var PhotosGallery = (function() {
 
-    function PhotosGalery() {
+    function PhotosGallery() {
 
         this.photos = [];
         this.list = [];
@@ -186,6 +186,6 @@ var PhotosGalery = (function() {
 
     }
 
-    return PhotosGalery;
+    return PhotosGallery;
 
 })();
