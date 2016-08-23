@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Photos galery</title>
+        <link rel="stylesheet" href="/main.css" media="screen" charset="utf-8">
+    </head>
+    <body>
+
+    <div id="photos-wrapper">
+        <div class="container photos" id="photos-viewer"></div>
+    </div>
+
+    <script type="text/javascript" src="photos-galery.js"></script>
+    <script type="text/javascript" src="loaders/flickr-loader.js"></script>
+    <script type="text/javascript" src="templaters/templater.js"></script>
+    <script type="text/javascript" src="templaters/flickr-templater.js"></script>
+    <script type="text/javascript" src="controls/key-up.js"></script>
+    <script type="text/javascript" src="controls/wheel.js"></script>
+    <script>
+
+            var container = document.getElementById('photos-viewer');
+
+            var photosGalery = new PhotosGalery();
+
+            var loader = new FlickrLoader('6334848e9069620388991202c6da7411','ocean')
+            photosGalery.setLoader(loader);
+
+            var templater = new FlickrTemplater(container);
+            photosGalery.setTemplater(templater);
+
+            var keyUpControl = new KeyUpControl(photosGalery);
+            var wheelControl = new WheelControl(photosGalery);
+
+            // var loader = new MockLoader()
+            // photosGalery.setLoader(loader);
+            //
+            // var templater = new MockTemplater(container);
+            // photosGalery.setTemplater(templater);
+
+
+            photosGalery.run();
+
+    </script>
+    </body>
+</html>

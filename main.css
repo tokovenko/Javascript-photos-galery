@@ -1,0 +1,29 @@
+#photos-wrapper {
+    width: 1024px;
+    height: 768px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding-top: 10px;
+}
+.photos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+    .photos .photo {
+        flex-direction: row;
+        width: 190px;
+        height:  245px;
+        background: grey;
+        margin-bottom: 12px;
+        border-radius: 3px;
+        overflow: hidden;
+    }
+        .photos .photo img {
+            min-width: 190px;
+            min-height:  245px;
+        }
+    .photos .photo.active {
+        box-shadow: 0px 0px 15px green;
+    }
