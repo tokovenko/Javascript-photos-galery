@@ -1,2 +1,2 @@
-# Javascript-photos-galery
-Simple photos galery
+# Javascript photos gallery
+Simple photos gallery with key and wheel controls
